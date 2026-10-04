@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Haiirrro - Full-Stack Engineer, AI Systems Architect & Creative Technologist Portfolio.">
+  <meta name="keywords" content="portfolio, developer, software engineer, ai engineer, full stack, react, nodejs, typescript, python">
+  <meta name="author" content="Haiirrro (Jaideep)">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Haiirrro | Portfolio - Full-Stack & AI Systems Engineer">
+  <meta property="og:description" content="Crafting Intelligent Digital Experiences, High-Performance Systems & Scalable Architecture.">
+  
+  <title>Haiirrro | Portfolio & Systems Lab</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Interactive Canvas & Ambient Glows -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <img src="assets/favicon.svg" alt="Haiirrro Logo">
+        <span>haiirrro<span class="brand-accent">.</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#terminal" class="nav-link">CLI</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Journey</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+          <i id="theme-icon" class="fas fa-sun"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Let's Talk</a>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Available for High-Impact Roles & Projects</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hello, I'm <br>
+          <span class="gradient-text">Haiirrro</span>
+        </h1>
+
+        <div class="typewriter-wrapper">
+          <span>Specializing in </span>&nbsp;
+          <span id="typewriter"></span>
+          <span class="typewriter-cursor">|</span>
+        </div>
+
+        <p class="hero-description">
+          Designing and deploying robust full-stack applications, distributed cloud services, and autonomous AI agents. Passionate about marrying raw engineering efficiency with unforgettable human-centric design.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-layer-group"></i> Explore Projects
+          </a>
+          <a href="#terminal" class="btn btn-secondary">
+            <i class="fas fa-terminal"></i> Launch CLI
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i> Get In Touch
+          </a>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>5+</h3>
+            <p>Years Exp</p>
+          </div>
+          <div class="stat-item">
+            <h3>35+</h3>
+            <p>Projects Shipped</p>
+          </div>
+          <div class="stat-item">
+            <h3>99.9%</h3>
+            <p>Reliability Focus</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Open Source Spirit</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avatar & Holographic Frame -->
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <img src="assets/avatar.svg" alt="Haiirrro Avatar" class="avatar-image">
+          <div class="floating-chip chip-1">
+            <i class="fas fa-code"></i> Full-Stack Dev
+          </div>
+          <div class="floating-chip chip-2">
+            <i class="fas fa-brain"></i> AI & Agents
+          </div>
+          <div class="floating-chip chip-3">
+            <i class="fas fa-bolt"></i> High Velocity
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Marquee Ribbon -->
+    <div class="container">
+      <div class="tech-ticker">
+        <div class="ticker-track">
+          <div class="ticker-item"><i class="fab fa-react"></i> React / Next.js</div>
+          <div class="ticker-item"><i class="fab fa-js-square"></i> TypeScript</div>
+          <div class="ticker-item"><i class="fab fa-node-js"></i> Node.js & Fastify</div>
+          <div class="ticker-item"><i class="fab fa-python"></i> Python & FastAPI</div>
+          <div class="ticker-item"><i class="fas fa-microchip"></i> PyTorch & LLMs</div>
+          <div class="ticker-item"><i class="fab fa-docker"></i> Docker & K8s</div>
+          <div class="ticker-item"><i class="fab fa-aws"></i> Cloud & Serverless</div>
+          <div class="ticker-item"><i class="fas fa-database"></i> PostgreSQL & Redis</div>
+          <div class="ticker-item"><i class="fas fa-cubes"></i> WebGL & Canvas</div>
+          <!-- Repeat for infinite ribbon scroll -->
+          <div class="ticker-item"><i class="fab fa-react"></i> React / Next.js</div>
+          <div class="ticker-item"><i class="fab fa-js-square"></i> TypeScript</div>
+          <div class="ticker-item"><i class="fab fa-node-js"></i> Node.js & Fastify</div>
+          <div class="ticker-item"><i class="fab fa-python"></i> Python & FastAPI</div>
+          <div class="ticker-item"><i class="fas fa-microchip"></i> PyTorch & LLMs</div>
+          <div class="ticker-item"><i class="fab fa-docker"></i> Docker & K8s</div>
+          <div class="ticker-item"><i class="fab fa-aws"></i> Cloud & Serverless</div>
+          <div class="ticker-item"><i class="fas fa-database"></i> PostgreSQL & Redis</div>
+          <div class="ticker-item"><i class="fas fa-cubes"></i> WebGL & Canvas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-user-astronaut"></i> Behind The Code</span>
+        <h2 class="section-title">Engineered with Purpose, <br><span class="gradient-text">Designed to Scale</span></h2>
+        <p class="section-subtitle">
+          Bridging the gap between cutting-edge computational intelligence and fluid, responsive interfaces.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a software engineer and technologist dedicated to building products that solve real-world problems. Whether constructing autonomous multi-agent pipelines or optimizing high-throughput distributed backends, my philosophy centers on write once, optimize thoughtfully, and deliver delight.
+          </p>
+          <p>
+            Over the past few years, I have worked across the entire engineering spectrum: from low-level concurrency and database indexing to reactive frontends and LLM orchestration. I thrive in environments where creativity meets demanding technical challenges.
+          </p>
+          <div style="margin-top: 28px;">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-handshake"></i> Let's Collaborate
+            </a>
+          </div>
+        </div>
+
+        <div class="about-pillars">
+          <div class="pillar-card tilt-card">
+            <div class="pillar-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h4>Peak Performance</h4>
+            <p>Zero-compromise optimizations, lightning-quick render cycles, and scalable cloud execution.</p>
+          </div>
+
+          <div class="pillar-card tilt-card">
+            <div class="pillar-icon"><i class="fas fa-network-wired"></i></div>
+            <h4>AI & Intelligent Agents</h4>
+            <p>Autonomous swarms, retrieval-augmented systems, and generative pipelines that automate complexity.</p>
+          </div>
+
+          <div class="pillar-card tilt-card">
+            <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>Resilient Architecture</h4>
+            <p>Fault-tolerant microservices, resilient APIs, and data integrity engineered from the foundation up.</p>
+          </div>
+
+          <div class="pillar-card tilt-card">
+            <div class="pillar-icon"><i class="fas fa-palette"></i></div>
+            <h4>Intuitive UX</h4>
+            <p>Accessible design systems, tactile feedback, micro-interactions, and frictionless workflows.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Terminal Section -->
+  <section id="terminal" class="terminal-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-terminal"></i> Interactive Sandbox</span>
+        <h2 class="section-title">Command Line <span class="gradient-text">Experience</span></h2>
+        <p class="section-subtitle">
+          Prefer the command line? Explore my portfolio directly from the shell below. Try typing <span class="term-cyan">help</span> or <span class="term-yellow">sudo hire-me</span>!
+        </p>
+      </div>
+
+      <div class="terminal-card" id="terminal-wrapper">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">haiirrro-cli &mdash; zsh (80x24)</span>
+          <div style="width: 40px;"></div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+          <div class="term-line">
+            <span class="term-cyan">=====================================================</span>
+          </div>
+          <div class="term-line">
+            <span class="term-bold">✨ Welcome to the Haiirrro Interactive CLI v2.4.0</span>
+          </div>
+          <div class="term-line">
+            <span class="term-dim">Type <span class="term-cyan">'help'</span> to see all commands, or click any section to navigate.</span>
+          </div>
+          <div class="term-line">
+            <span class="term-cyan">=====================================================</span>
+          </div>
+        </div>
+
+        <div class="terminal-input-row">
+          <span class="term-prompt">guest@haiirrro:~$</span>
+          <input type="text" id="terminal-input" placeholder="Type a command (e.g. help, skills, hire)..." autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-tools"></i> Capabilities</span>
+        <h2 class="section-title">Tech Stack & <span class="gradient-text">Proficiencies</span></h2>
+        <p class="section-subtitle">
+          An arsenal of modern languages, libraries, and frameworks honed through building production-grade software.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="skill-tabs">
+        <button class="skill-tab-btn active" data-skill-category="all">All Skills</button>
+        <button class="skill-tab-btn" data-skill-category="frontend">Frontend</button>
+        <button class="skill-tab-btn" data-skill-category="backend">Backend & Cloud</button>
+        <button class="skill-tab-btn" data-skill-category="ai">AI & Data</button>
+        <button class="skill-tab-btn" data-skill-category="devops">DevOps & Tools</button>
+      </div>
+
+      <div class="skills-container">
+        <!-- Frontend Skills -->
+        <div class="skill-category-group" data-category="frontend">
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fab fa-react"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">React / Next.js</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fab fa-js"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">TypeScript / JS</span>
+                <span class="skill-pct">94%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 94%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fab fa-css3-alt"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">Tailwind CSS / UI</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fas fa-cube"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">WebGL & Canvas</span>
+                <span class="skill-pct">82%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="skill-category-group" data-category="backend">
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fab fa-node-js"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">Node.js & Fastify</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fab fa-python"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">Python & FastAPI</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fas fa-database"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">PostgreSQL & Redis</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fas fa-project-diagram"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">GraphQL & gRPC</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI & Data Skills -->
+        <div class="skill-category-group" data-category="ai">
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fas fa-brain"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">Autonomous Agent Swarms</span>
+                <span class="skill-pct">93%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 93%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fas fa-layer-group"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">Vector DBs (Qdrant/Pinecone)</span>
+                <span class="skill-pct">89%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 89%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fas fa-microchip"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">PyTorch & HuggingFace</span>
+                <span class="skill-pct">84%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 84%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fas fa-robot"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">RAG & Prompt Architecture</span>
+                <span class="skill-pct">94%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 94%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DevOps & Tools -->
+        <div class="skill-category-group" data-category="devops">
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fab fa-docker"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">Docker & Containers</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fab fa-aws"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">AWS & Serverless</span>
+                <span class="skill-pct">86%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 86%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fab fa-git-alt"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">Git & CI/CD Actions</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-item tilt-card">
+            <div class="skill-icon-box"><i class="fab fa-linux"></i></div>
+            <div class="skill-info">
+              <div class="skill-info-top">
+                <span class="skill-name">Linux & Systems Ops</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-folder-open"></i> Portfolio Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Creations</span></h2>
+        <p class="section-subtitle">
+          A selection of projects exploring generative agents, edge computing, real-time telemetry, and reactive interfaces.
+        </p>
+      </div>
+
+      <!-- Project Filters -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ai">AI & ML</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="systems">Cloud & Systems</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: CognitiveFlow -->
+        <div class="project-card tilt-card" data-category="ai fullstack">
+          <div class="project-preview">
+            <div class="project-mockup">
+              <div class="mockup-icon"><i class="fas fa-network-wired"></i></div>
+            </div>
+            <span class="project-pill">Featured Project</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">CognitiveFlow</h3>
+            <p class="project-desc">
+              Multi-agent autonomous task orchestration engine with real-time streaming DAG visualization and dynamic sandboxed execution.
+            </p>
+            <div class="project-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Qdrant</span>
+              <span class="tag">React</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-secondary btn-sm open-modal-btn" data-project="cognitiveflow">
+                <i class="fas fa-eye"></i> Quick View
+              </button>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="icon-link" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AuraCloud -->
+        <div class="project-card tilt-card" data-category="systems fullstack">
+          <div class="project-preview">
+            <div class="project-mockup">
+              <div class="mockup-icon"><i class="fas fa-cloud-bolt"></i></div>
+            </div>
+            <span class="project-pill">Edge Compute</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AuraCloud</h3>
+            <p class="project-desc">
+              Serverless edge compute platform routing WebAssembly micro-functions across 200+ nodes with sub-10ms startup latency.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Go</span>
+              <span class="tag">WASM</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-secondary btn-sm open-modal-btn" data-project="auracloud">
+                <i class="fas fa-eye"></i> Quick View
+              </button>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="icon-link" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: PulseMetrics -->
+        <div class="project-card tilt-card" data-category="systems">
+          <div class="project-preview">
+            <div class="project-mockup">
+              <div class="mockup-icon"><i class="fas fa-chart-line"></i></div>
+            </div>
+            <span class="project-pill">High-Throughput</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">PulseMetrics</h3>
+            <p class="project-desc">
+              Distributed real-time analytics streaming engine handling 100K+ events/sec with dynamic anomaly detection and live charts.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Apache Kafka</span>
+              <span class="tag">ClickHouse</span>
+              <span class="tag">Redis</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-secondary btn-sm open-modal-btn" data-project="pulsemetrics">
+                <i class="fas fa-eye"></i> Quick View
+              </button>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="icon-link" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: OmniSynth -->
+        <div class="project-card tilt-card" data-category="ai fullstack">
+          <div class="project-preview">
+            <div class="project-mockup">
+              <div class="mockup-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+            </div>
+            <span class="project-pill">Creative Tech</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">OmniSynth</h3>
+            <p class="project-desc">
+              Collaborative infinite canvas tool combining generative multimodal AI graphics, real-time CRDT sync, and spatial audio synthesis.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">WebGL</span>
+              <span class="tag">WebSockets</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-secondary btn-sm open-modal-btn" data-project="omnisynth">
+                <i class="fas fa-eye"></i> Quick View
+              </button>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="icon-link" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey / Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-route"></i> Career Milestones</span>
+        <h2 class="section-title">The Engineering <span class="gradient-text">Journey</span></h2>
+        <p class="section-subtitle">
+          Continuous evolution through building scalable systems, high-growth startups, and open-source tooling.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Milestone 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023 &mdash; PRESENT</span>
+            <h3 class="timeline-role">Lead Systems Architect</h3>
+            <h4 class="timeline-company">Autonomous Labs &bull; Remote</h4>
+            <p class="timeline-desc">
+              Leading the architecture for decentralized agent orchestration pipelines, optimizing LLM inference latency, and establishing micro-frontend infrastructures serving millions of user sessions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2021 &mdash; 2023</span>
+            <h3 class="timeline-role">Senior Full-Stack Engineer</h3>
+            <h4 class="timeline-company">Nexus Cloud Systems</h4>
+            <p class="timeline-desc">
+              Spearheaded migration to microservices, improved API response times by 48%, and directed development of an analytics dashboard handling billions of annual telemetry events.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2019 &mdash; 2021</span>
+            <h3 class="timeline-role">Software Engineer</h3>
+            <h4 class="timeline-company">Hyperion Digital</h4>
+            <p class="timeline-desc">
+              Built interactive customer web platforms with React and TypeScript, designed GraphQL APIs, and implemented automated end-to-end CI/CD testing pipelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-paper-plane"></i> Get In Touch</span>
+        <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+        <p class="section-subtitle">
+          Have an exciting project, an ambitious engineering challenge, or just want to discuss the future of AI? My inbox is always open.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Meta & Direct Channels -->
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+            <div class="contact-meta">
+              <h4>Direct Email</h4>
+              <p><a href="mailto:jaideep@hairo.dev">jaideep@hairo.dev</a></p>
+            </div>
+            <button id="copy-email-btn" class="btn btn-secondary btn-sm" style="margin-left: auto;" data-email="jaideep@hairo.dev" title="Copy to clipboard">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-meta">
+              <h4>Location & Timezone</h4>
+              <p>Available Globally &bull; Remote & Relocation</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon-box"><i class="fas fa-comments"></i></div>
+            <div class="contact-meta">
+              <h4>Social Channels</h4>
+              <div class="social-links">
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://discord.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="Discord"><i class="fab fa-discord"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Box -->
+        <div class="contact-form-box">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Alex Morgan" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Project or Topic</label>
+              <input type="text" id="subject" name="subject" placeholder="New Project / AI Collaboration / Contract Role" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me about your vision, timeline, and goals..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo" style="font-size: 1.15rem;">
+          <img src="assets/favicon.svg" alt="Haiirrro Logo" style="width: 28px; height: 28px;">
+          <span>haiirrro<span class="brand-accent">.</span></span>
+        </a>
+        <p>&copy; 2026 Haiirrro (Jaideep). All rights reserved.</p>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+      <div id="modal-details-content">
+        <!-- Dynamically populated by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
